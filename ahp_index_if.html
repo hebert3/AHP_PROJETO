@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AHP - Sistema de Apoio à Decisão</title>
+  <link rel="stylesheet" href="ahp_styles_if.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <div class="brand-row">
+        <div class="if-mark" aria-hidden="true">
+          <span class="if-dot"></span>
+          <span class="if-square"></span>
+          <span class="if-square"></span>
+          <span class="if-square"></span>
+          <span class="if-square"></span>
+          <span></span>
+          <span class="if-square"></span>
+          <span class="if-square"></span>
+          <span class="if-square"></span>
+          <span class="if-square"></span>
+          <span class="if-square"></span>
+          <span></span>
+        </div>
+        <div class="brand-text">
+          <strong>INSTITUTO FEDERAL</strong>
+          <span>@hebertivisson</span>
+        </div>
+      </div>
+      <h1>AHP - Analytic Hierarchy Process</h1>
+      <p>
+        Página web para análise multicritério com problema, critérios, alternativas,
+        matrizes de comparação pela escala de Saaty e resultado final.
+      </p>
+    </header>
+
+    <main>
+      <section class="card">
+        <h2>1. Definição do problema</h2>
+        <div class="form-grid">
+          <div class="field full">
+            <label for="problemName">Nome do problema</label>
+            <input type="text" id="problemName" placeholder="Ex.: Escolha do melhor emprego" />
+          </div>
+
+          <div class="field">
+            <label for="criterionInput">Adicionar critério</label>
+            <div class="inline-group">
+              <input type="text" id="criterionInput" placeholder="Ex.: Salário" />
+              <button id="addCriterionBtn" type="button">Adicionar</button>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="alternativeInput">Adicionar alternativa</label>
+            <div class="inline-group">
+              <input type="text" id="alternativeInput" placeholder="Ex.: Emprego 1" />
+              <button id="addAlternativeBtn" type="button">Adicionar</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="lists-grid">
+          <div>
+            <h3>Critérios</h3>
+            <ul id="criteriaList" class="item-list"></ul>
+          </div>
+          <div>
+            <h3>Alternativas</h3>
+            <ul id="alternativesList" class="item-list"></ul>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button id="buildMatricesBtn" type="button">Gerar matrizes</button>
+        </div>
+      </section>
+
+      <section id="saatyGuideSection" class="card hidden">
+        <h2>2. Escala de Saaty</h2>
+        <div id="saatyGuide"></div>
+      </section>
+
+      <section id="criteriaMatrixSection" class="card hidden">
+        <h2>3. Matriz de comparação dos critérios</h2>
+        <p class="help-text">
+          Compare os critérios dois a dois. A diagonal principal vale 1 e o valor recíproco é preenchido automaticamente.
+        </p>
+        <div id="criteriaMatrixContainer"></div>
+      </section>
+
+      <section id="alternativesMatricesSection" class="card hidden">
+        <h2>4. Matrizes das alternativas por critério</h2>
+        <p class="help-text">
+          Para cada critério, compare as alternativas duas a duas usando a escala de Saaty.
+        </p>
+        <div id="alternativesMatricesContainer"></div>
+      </section>
+
+      <section id="calculateSection" class="card hidden">
+        <h2>5. Cálculo</h2>
+        <div class="actions">
+          <button id="calculateBtn" type="button">Calcular resultado do AHP</button>
+        </div>
+      </section>
+
+      <section id="resultsSection" class="card hidden">
+        <h2>6. Resultado</h2>
+        <div id="problemSummary"></div>
+        <div id="criteriaWeights"></div>
+        <div id="priorityMatrix"></div>
+        <div id="consistencyInfo"></div>
+        <div id="finalRanking"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="ahp_script.js"></script>
+</body>
+</html>
