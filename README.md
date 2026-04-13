@@ -175,4 +175,5 @@ Nesse caso, a aplicação permite comparar os empregos em cada critério e depoi
 ---
 
 ## Autor
-Projeto desenvolvido para a disciplina de **Sistema de Apoio à Decisão**, com foco na implementação do método **AHP** em uma página web.
+- @hebert ivisson 
+- Projeto desenvolvido para a disciplina de **Sistema de Apoio à Decisão**, com foco na implementação do método **AHP** em uma página web. 
