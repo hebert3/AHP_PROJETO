@@ -41,10 +41,10 @@ A estrutura do sistema segue as etapas apresentadas na aula:
 ## Estrutura dos arquivos
 ```bash
 .
-├── ahp_index.html
-├── ahp_styles.css
+├── ahp_index_if.html
+├── ahp_styles_if.css
 ├── ahp_script.js
-└── README_AHP.md
+└── README.md
 ```
 
 ### Função de cada arquivo
